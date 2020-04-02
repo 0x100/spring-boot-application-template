@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./db/app;AUTO_SERVER=TRUE
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    showSql: false
+    properties:
+      hibernate.format_sql: true
+    hibernate:
+      ddlAuto: validate
+  liquibase:
+    change-log: classpath:/liquibase/db.changelog-master.xml
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    enabled: true
+    dropFirst: true
+  main:
+    banner-mode: off
