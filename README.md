@@ -7,6 +7,7 @@
   ###
   
 Includes: 
+ - Spring Boot 2.2.6
  - Spring Web
  - Spring Data
  - Lombok
