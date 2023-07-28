@@ -9,7 +9,7 @@ spring:
     properties:
       hibernate.format_sql: true
     hibernate:
-      ddlAuto: validate
+      ddlAuto: none
   liquibase:
     change-log: classpath:/liquibase/db.changelog-master.xml
     url: ${spring.datasource.url}
